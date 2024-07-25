@@ -257,8 +257,8 @@ export default function ListPanel({
                 displayIndex = listIndex + 1;
 
               if (
-                current.sourceID === id &&
-                listIndex === current.sourceIndex
+                current?.sourceID === id &&
+                listIndex === current?.sourceIndex
               ) {
                 textColor = "#fee39c";
                 if (!paused) displayIndex = <PlayingIcon />;

@@ -286,7 +286,7 @@ export default class Queue {
     if (this.chaosMode) {
       playlist.sort(() => Math.random() - 0.5);
     } else {
-      const cIndex = current.queued ? -1 : current.sourceIndex;
+      const cIndex = current.queued ? -1 : current?.sourceIndex;
       const fSectIndexOffset = skipCurrent ? 1 : 0;
 
       const fSect = playlist
