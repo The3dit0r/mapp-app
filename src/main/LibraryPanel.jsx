@@ -49,7 +49,7 @@ function MainPanel({
   const queueSystem = useContext(QueueContext);
 
   const current = queueSystem.getCurrent();
-  const currentSrcID = current.sourceID;
+  const currentSrcID = current?.sourceID;
 
   const savedAlbums = userData.savedItems.getType("albums");
   const savedArtists = userData.savedItems.getType("artists");
