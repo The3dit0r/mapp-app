@@ -1,0 +1,94 @@
+.row-item {
+  flex-grow: 1;
+  --height: 70px;
+  height: var(--height);
+
+  overflow: hidden;
+  color: #fff;
+
+  padding: 5px;
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  transition: all 40ms;
+  user-select: none;
+}
+
+.row-item:not(.load, .nozum):active {
+  transform: scale(0.96);
+  filter: brightness(0.8);
+}
+
+.row-item .cover {
+  width: calc(var(--height) - 5px);
+  height: calc(var(--height) - 5px);
+
+  background-color: #0006;
+  border-radius: 5px;
+}
+
+.row-item .info {
+  flex-grow: 1;
+  font-size: 1em;
+  line-height: 1.5;
+
+  max-width: calc(100% - 85px);
+  margin-right: 10px;
+}
+
+.row-item .info .title,
+.row-item .info .subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.row-item .info .subtitle {
+  -webkit-line-clamp: 1;
+}
+
+.row-item.load .info * {
+  background-color: #0004;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.row-item.load .an {
+  animation-name: glow;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.row-item.load .info .title {
+  height: 17px;
+}
+
+.row-item.load .info .subtitle {
+  width: calc(100% - 100px);
+  height: 15px;
+}
+
+@keyframes glow {
+  0% {
+    background: #0005;
+  }
+  100% {
+    background: #0003;
+  }
+}
+
+/* .row-item .other {
+  width: 20px;
+  text-align: right;
+
+  transition: all 60ms;
+}
+
+.row-item .other:active {
+  transform: scale(0.9);
+} */

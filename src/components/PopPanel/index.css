@@ -1,0 +1,59 @@
+.pop-panel-wrapper {
+  --height: 45px;
+
+  width: var(--main-width);
+  height: var(--height);
+
+  position: absolute;
+  z-index: 14;
+
+  bottom: 150px;
+  left: 0px;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  transition: transform 0.2s, opacity 0.2s 0.1s;
+}
+
+.pop-panel {
+  height: 100%;
+  flex: 1;
+
+  margin: 0px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  /* 
+  display: flex;
+  align-items: center; */
+
+  width: calc(100% - 40px);
+}
+
+.pop-panel-wrapper.hidden {
+  transform: translateY(300px);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+.pop-panel .icon {
+  width: var(--height);
+}
+
+.pop-panel .text {
+  flex-grow: 1;
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
+.pop-panel .btt {
+  width: calc(2 * var(--height));
+  text-align: right;
+  padding: 0 15px 0 0;
+
+  font-size: 13px;
+  color: var(--back-color);
+  font-weight: 600;
+}

@@ -1,0 +1,47 @@
+.box-item {
+  --size: 160px;
+
+  width: var(--size);
+  height: calc(var(--size) + 50px);
+
+  color: #fff;
+  display: inline-block;
+  z-index: 1;
+  user-select: none;
+}
+
+.box-item .cover-wrapper {
+  width: var(--size);
+  height: var(--size);
+}
+
+.box-item .cover-wrapper .cover {
+  --cover-size: calc(var(--size) - 2px);
+
+  width: var(--cover-size);
+  height: var(--cover-size);
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 5px;
+}
+
+.box-item .info {
+  padding: 5px;
+
+  width: calc(100% - 10px);
+}
+
+.box-item:active {
+  transform: scale(0.95);
+  filter: brightness(0.75);
+}
+
+.box-item.artist {
+  text-align: center;
+}
+
+.box-item.artist .cover {
+  border-radius: calc(var(--cover-size) * 0.5);
+}

@@ -1,0 +1,115 @@
+.context-menu {
+  width: calc(var(--main-width) - 20px);
+  height: var(--main-height);
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  background-image: url("../../../public/back5.png");
+  background-size: auto 50%;
+  background-repeat: no-repeat;
+
+  transform: translateY(0%);
+
+  z-index: 10;
+  opacity: 1;
+
+  transition: transform 0.25s, opacity 0.3s;
+  color: #fff;
+
+  padding: 10px;
+}
+
+.context-menu.hidden {
+  transform: translateY(100%);
+
+  opacity: 0;
+}
+
+.context-menu .header {
+  margin-top: 30px;
+  text-align: center;
+
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.context-menu .cover-wrapper {
+  --size: min(var(--main-width), var(--main-height));
+
+  height: calc(var(--size) - 80px);
+  flex: 1;
+}
+
+.context-menu .cover-wrapper .cover {
+  width: calc(var(--size) - 150px);
+  height: calc(var(--size) - 150px);
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.context-menu .cover-wrapper .cover.artist {
+  border-radius: 9e9in;
+}
+
+.context-menu .info {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0px 50px;
+
+  line-height: 1.2;
+}
+
+.context-menu .info .title {
+  font-size: 1.15em;
+  margin-bottom: 7px;
+}
+
+.context-menu .options .option {
+  flex: 1;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  padding: 0px 30px;
+
+  gap: 20px;
+  user-select: none;
+}
+
+.context-menu .options .option:active {
+  transform: scale(0.97);
+  filter: brightness(0.8);
+}
+
+.context-menu .fader {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+
+  height: 50px;
+  width: 100%;
+  background-image: linear-gradient(to top, #000, #0000);
+}
+
+.context-menu .main {
+  background-image: linear-gradient(#0000, #1f083b 30%, #000);
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  height: 100%;
+  width: 100%;
+
+  overflow: auto;
+}
+
+.context-menu .main::-webkit-scrollbar {
+  width: 0px;
+}

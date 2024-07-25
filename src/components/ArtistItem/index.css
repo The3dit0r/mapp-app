@@ -1,0 +1,50 @@
+.artist-item {
+  --height: 70px;
+
+  width: calc(100% - 20px);
+  height: var(--height);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 10px;
+  font-size: 13px;
+}
+
+.artist-item .cover-wrapper {
+  width: var(--height);
+  height: var(--height);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artist-item .cover-wrapper .cover {
+  --size: calc(var(--height) - 5px);
+  width: var(--size);
+  height: var(--size);
+
+  background-position: center;
+  background-size: cover;
+  border-radius: calc(var(--height) / 2);
+}
+
+.artist-item .info {
+  width: calc(100% - var(--height) - 10px);
+  height: var(--height);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  color: #fff;
+}
+
+.artist-item:active {
+  transform: scale(0.96);
+  filter: brightness(0.8);
+}

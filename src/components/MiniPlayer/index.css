@@ -1,0 +1,72 @@
+.mini-player {
+  --padding: 10px;
+  --mini-height: 65px;
+
+  position: absolute;
+  bottom: 60px;
+  z-index: 5;
+
+  width: calc(var(--main-width) - var(--padding) * 2);
+  height: var(--mini-height);
+  left: var(--padding);
+
+  background-color: #500e96;
+  border-radius: 5px;
+}
+
+.mini-player .cover {
+  --size: calc(var(--mini-height) - 10px);
+
+  width: var(--size);
+  height: var(--size);
+
+  background-image: url("../../../public/nocover.png");
+  background-size: cover;
+
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+
+.mini-player .info {
+  flex: 1;
+
+  color: #fff;
+  font-size: 11px;
+  padding-left: 5px;
+
+  max-width: calc(100% - var(--mini-height) - 140px);
+
+  line-height: 1.2;
+}
+
+.mini-player .control {
+  font-size: 40px;
+  color: #fff;
+
+  padding: 0px 10px;
+  gap: 5px;
+
+  justify-content: flex-end;
+  width: 110px;
+}
+
+.mini-player .mini-prog {
+  --cur: 40%;
+
+  background: linear-gradient(
+    to right,
+    #eee 0px,
+    #eee var(--cur),
+    #fff6 var(--cur),
+    #fff6
+  );
+
+  width: calc(100% - 10px);
+  height: 3px;
+
+  border-radius: 3px;
+
+  position: absolute;
+  bottom: -1px;
+  left: 5px;
+}

@@ -1,0 +1,35 @@
+{
+  "short_name": "Spotifake",
+  "name": "Spotifake",
+  "icons": [
+    {
+      "src": "logo16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "logo32.ico",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/library",
+  "display": "fullscreen",
+  "theme_color": "#2a0d49",
+  "background_color": "#2a0d49"
+}

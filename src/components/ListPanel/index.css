@@ -1,0 +1,231 @@
+.list-panel {
+  --main: #601f9b;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: auto;
+  color: #fff;
+
+  background-color: var(--main);
+}
+
+.list-panel::-webkit-scrollbar {
+  width: 0px;
+}
+
+.list-panel > .header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  color: #fff;
+  font-size: 19px;
+
+  width: 100%;
+  z-index: 3;
+}
+
+.list-panel > .header .ico {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+
+  font-size: 20px;
+}
+
+.list-panel > .header .info {
+  line-height: 1.2;
+  text-align: center;
+
+  margin-top: 20px;
+
+  height: 45px;
+  font-size: 20px;
+
+  overflow: hidden;
+}
+
+.list-panel > .header .info .type {
+  font-size: 20px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+  transform: translateY(7px);
+
+  transition: transform 0.2s, font-size 0.1s;
+}
+
+.list-panel > .header .info .title {
+  transform: translateY(50px);
+  transition: transform 0.2s;
+  width: calc(var(--main-width) - 120px);
+
+  font-size: 16px;
+}
+
+.list-panel > .header.active .info .title,
+.list-panel > .header.active .info .type {
+  transform: translateY(0px);
+}
+
+.list-panel > .header.active .info .type {
+  font-size: 12px;
+}
+
+.list-panel > .cover-wrapper {
+  --height: min(calc(var(--main-height) * 0.5), calc(var(--main-width) - 80px));
+  height: var(--height);
+  width: calc(100% - 0px);
+
+  background-color: rgb(42, 116, 165);
+  border-radius: 25% 25% 43% 50% / 0% 0% 6% 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../../../public/back2.png");
+  background-size: cover;
+
+  margin-bottom: 100px;
+
+  position: sticky;
+  top: calc(-0.77 * var(--height));
+
+  z-index: 2;
+}
+
+.list-panel > .cover {
+  --size: min(calc(var(--main-height) * 0.5), calc(var(--main-width) - 80px));
+  --transform-x: calc(var(--main-width) * 0.5 - 0.5 * var(--size) - 10px);
+  --transform-y: calc(-1 * var(--size) - 0px);
+
+  width: var(--size);
+  height: var(--size);
+
+  transform: translate(var(--transform-x), var(--transform-y));
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 10px;
+  margin-bottom: var(--transform-y);
+
+  position: relative;
+  z-index: 3;
+}
+
+.list-panel > .zum.play-pause {
+  position: sticky;
+  top: 50px;
+  display: inline-flex;
+  z-index: 4;
+}
+
+.list-panel .general {
+  padding: 0px 30px;
+  width: calc(100% - 60px);
+
+  margin-top: 20px;
+}
+
+.list-panel .general .info {
+  flex: 1;
+}
+
+.list-panel .control {
+  padding: 20px 25px;
+  display: inline-flex;
+  width: calc(100% - 125px);
+
+  transform: translateY(3px);
+}
+
+.list-panel .row-item {
+  margin: 0px;
+}
+
+.list-panel .row-item .index {
+  display: none;
+}
+
+.list-panel .row-item .info {
+  max-width: calc(100% - 90px);
+}
+
+.list-panel .copyrights {
+  padding: 20px;
+  font-size: 18px;
+}
+
+.list-panel .copyrights .label {
+  gap: 4px;
+}
+
+.list-panel .copyrights .label span {
+  font-size: 13px;
+}
+
+.list-panel .fade {
+  background-image: linear-gradient(to bottom, #0000, #561995);
+}
+
+.list-panel .appeared-artists {
+  padding: 20px 10px;
+}
+
+.list-panel .appeared-artists .artist-item {
+  --height: 65px;
+  font-size: 12px;
+}
+
+.list-panel .appeared-artists .header {
+  content: var(--text);
+  font-weight: 600;
+
+  margin: 10px 0px 10px 10px;
+}
+
+.list-panel .search-bar {
+  height: 36px;
+  background-color: #0000;
+  border: 1px solid #fff;
+  color: #fff;
+
+  z-index: 1;
+
+  width: calc(100% - 70px);
+  margin: 20px;
+}
+
+.list-panel .search-bar input {
+  font-size: 14px;
+  color: #fff;
+}
+
+.list-panel .search-bar input::placeholder {
+  color: #fff;
+}
+
+/* Artist Special */
+
+.list-panel.artist > .cover-wrapper {
+  background-image: url("../../../public/back3.png");
+}
+
+.list-panel.artist > .cover {
+  border-radius: 50%;
+
+  width: calc(var(--size) - 40px);
+  height: calc(var(--size) - 40px);
+  transform: translate(calc(var(--transform-x) + 20px), var(--transform-y));
+}
+
+.list-panel.artist > .general > .info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.list-panel.artist .search-bar {
+  display: none;
+}
