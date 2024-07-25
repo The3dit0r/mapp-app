@@ -224,7 +224,7 @@ export default function ListPanel({
       <div className="playlist-add">{playlistAdd}</div>
 
       <div style={{ fontSize: 12, padding: "0px 15px" }} className="fade">
-        {renderArr
+        {[...renderArr]
           .sort((a) => (a.id ? -1 : 0))
           .filter((track) => {
             const filter = query.trim();
